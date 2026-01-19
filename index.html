@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Flipkart Deals</title>
+
+  <!-- CSV Parser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🔥 Best Flipkart Deals</h1>
+    <p>Updated automatically from live deals</p>
+  </header>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Electronics')">Electronics</button>
+    <button onclick="filterCategory('Wearables')">Wearables</button>
+    <button onclick="filterCategory('Accessories')">Accessories</button>
+    <button onclick="filterCategory('Grooming')">Grooming</button>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input type="text" placeholder="Search deals..." onkeyup="searchProducts(this.value)">
+  </div>
+
+  <!-- PRODUCTS -->
+  <main class="container" id="products"></main>
+
+  <footer>
+    <p>
+      Disclosure: This website contains affiliate links. We may earn a commission
+      at no extra cost to you.
+    </p>
+    <p>Prices may change.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
